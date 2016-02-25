@@ -21,7 +21,8 @@
         android:id="@+id/btPlayBot"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="98dp" />
+        android:layout_marginTop="98dp"
+        android:onClick="PlayWithBot" />
 
     <Button
         android:layout_width="wrap_content"
