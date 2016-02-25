@@ -15,9 +15,9 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
     }
 
+
     public void PlayWithBot(View view) {
         Intent playScreen = new Intent(MainMenuActivity.this, PlayActivity.class);
         startActivity(playScreen);
-        int i=0;
     }
 }

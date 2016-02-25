@@ -18,7 +18,6 @@
         <activity android:name=".Activity.PlayActivity"
             android:theme="@style/Theme.AppCompat"
             >
-            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen">-->
         </activity>
     </application>
 

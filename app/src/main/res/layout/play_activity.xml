@@ -10,6 +10,109 @@
         android:layout_weight=".5"
         android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView15"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/nullcard" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView16"
+                android:background="@drawable/nullcard"
+                android:layout_marginStart="25dp"
+                android:layout_alignTop="@+id/imageView15"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView17"
+                android:background="@drawable/nullcard"
+                android:layout_marginStart="25dp"
+                android:layout_alignTop="@+id/imageView15"
+                android:layout_alignStart="@+id/imageView16" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView18"
+                android:background="@drawable/nullcard"
+                android:layout_marginStart="24dp"
+                android:layout_alignTop="@+id/imageView15"
+                android:layout_alignStart="@+id/imageView17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView19"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView15"
+                android:layout_toEndOf="@+id/imageView15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView20"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView16"
+                android:layout_toEndOf="@+id/imageView16" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView21"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView17"
+                android:layout_toEndOf="@+id/imageView17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView22"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView18"
+                android:layout_toEndOf="@+id/imageView18" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView23"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView19"
+                android:layout_toEndOf="@+id/imageView19" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView24"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView20"
+                android:layout_toEndOf="@+id/imageView20" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView25"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView21"
+                android:layout_toEndOf="@+id/imageView21" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView26"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView23"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -22,13 +125,14 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_weight=".5"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
             <ImageButton
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:id="@+id/imageButton"
-                android:background="@drawable/deck" />
+                android:background="@drawable/shirt" />
         </LinearLayout>
 
         <LinearLayout
@@ -36,14 +140,35 @@
             android:layout_width="match_parent"
             android:layout_weight=".5"
 
-            android:layout_height="match_parent"></LinearLayout>
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_wall">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:contentDescription="status" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_weight=".5"
 
-            android:layout_height="match_parent"></LinearLayout>
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/new_button" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton3"
+                android:src="@drawable/exit_button" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -55,6 +180,105 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/nullcard" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:background="@drawable/nullcard"
+                android:layout_marginStart="25dp"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:background="@drawable/nullcard"
+                android:layout_marginStart="25dp"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignStart="@+id/imageView4" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView6"
+                android:background="@drawable/nullcard"
+                android:layout_marginStart="24dp"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignStart="@+id/imageView5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView7"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_toEndOf="@+id/imageView3" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView8"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView4"
+                android:layout_toEndOf="@+id/imageView4" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView9"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_toEndOf="@+id/imageView5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView10"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView6"
+                android:layout_toEndOf="@+id/imageView6" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView11"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView7"
+                android:layout_toEndOf="@+id/imageView7" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView12"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView8"
+                android:layout_toEndOf="@+id/imageView8" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView13"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView9"
+                android:layout_toEndOf="@+id/imageView9" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView14"
+                android:background="@drawable/nullcard"
+                android:layout_alignTop="@+id/imageView11"
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
     </LinearLayout>
