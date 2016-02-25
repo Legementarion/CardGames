@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2ce329">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -119,20 +119,23 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_weight=".5"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_dask"
+        android:padding="30px">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_weight=".5"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:padding="5px">
 
             <ImageButton
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:id="@+id/imageButton"
-                android:background="@drawable/shirt" />
+                android:background="@drawable/shirt"
+                android:onClick="giveMeMore" />
         </LinearLayout>
 
         <LinearLayout
@@ -141,7 +144,7 @@
             android:layout_weight=".5"
 
             android:layout_height="match_parent"
-            android:background="@drawable/bg_wall">
+            android:background="@drawable/bg_dask">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -161,13 +164,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton2"
-                android:src="@drawable/new_button" />
+                android:src="@drawable/new_button"
+                android:layout_weight="3" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton3"
-                android:src="@drawable/exit_button" />
+                android:src="@drawable/exit_button"
+                android:layout_weight="3" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton4"
+                android:layout_weight="3"
+                android:src="@drawable/stop_button" />
         </LinearLayout>
     </LinearLayout>
 
