@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.PlayActivity"></activity>
+        <activity android:name=".Activity.PlayActivity"
+            android:theme="@style/Theme.AppCompat"
+            >
+            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen">-->
+        </activity>
     </application>
 
 </manifest>

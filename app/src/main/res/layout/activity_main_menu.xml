@@ -12,12 +12,13 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/bg"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/bg_MainMeny" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play With Bot"
+        android:text="@string/PlayWithBot"
         android:id="@+id/btPlayBot"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -27,7 +28,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play with another Player"
+        android:text="@string/PlayWithPlayer"
         android:id="@+id/button2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
