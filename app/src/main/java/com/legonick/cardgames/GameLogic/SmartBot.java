@@ -1,14 +1,15 @@
 package com.legonick.cardgames.GameLogic;
 
-public class User implements Gamer {
+public class SmartBot implements Gamer {
 
     public int result;
+    public boolean readyToPick;
     public int[] cards;
     public int cardsIndex;
-    public boolean userPick;
 
-    public User() {
+    public SmartBot() {
         result = 0;
+        readyToPick = true;
         cards = new int[11];
         cardsIndex = 0;
     }
@@ -16,6 +17,8 @@ public class User implements Gamer {
     @Override
     public void setResult(int cardValue) {
         result += cardValue;
+        if (analyze())
+            readyToPick = false;
     }
 
     @Override
@@ -23,7 +26,8 @@ public class User implements Gamer {
         cards[cardsIndex++] = cardId;
     }
 
-    public void changeTuz() {
+    private boolean analyze() {
 
+        return true;
     }
 }

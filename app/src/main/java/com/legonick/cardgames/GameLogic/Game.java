@@ -23,11 +23,8 @@ public class Game {
             user.setResult(getIntValue(cardId));
         }
 
-        while (bot.readyToPick) {
-            int cardId = pickCard();
-            bot.addcard(pickCard());
-            bot.setResult(getIntValue(cardId));
-        }
+        while (bot.readyToPick)
+            botPick();
 
     }
 
@@ -35,7 +32,6 @@ public class Game {
         return gameDeck[cardId];
     }
 
-    //returns Id of the card (1-36)
     private int pickCard() {
         int cardId = (int) (Math.random() * 36);
         if (gameDeck[cardId] == 0) {
@@ -47,20 +43,32 @@ public class Game {
     }
 
     private void pickFirstCards() {
+        userPick();
+        delay();
+        userPick();
+        delay();
+        botPick();
+        botPick();
+    }
+
+    private void userPick() {
+        int cardId = pickCard();
+        user.addcard(pickCard());
+        user.setResult(getIntValue(cardId));
+    }
+
+    private void botPick() {
         int cardId = pickCard();
         bot.addcard(pickCard());
         bot.setResult(getIntValue(cardId));
+        delay();
+    }
 
-        cardId = pickCard();
-        bot.addcard(pickCard());
-        bot.setResult(getIntValue(cardId));
-
-        cardId = pickCard();
-        user.addcard(pickCard());
-        user.setResult(getIntValue(cardId));
-
-        cardId = pickCard();
-        user.addcard(pickCard());
-        user.setResult(getIntValue(cardId));
+    private void delay() {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
