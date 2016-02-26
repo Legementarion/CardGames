@@ -17,7 +17,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView15"
+                android:id="@+id/b0"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 android:background="@drawable/nullcard" />
@@ -25,92 +25,92 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView16"
+                android:id="@+id/b1"
                 android:background="@drawable/nullcard"
                 android:layout_marginStart="25dp"
-                android:layout_alignTop="@+id/imageView15"
+                android:layout_alignTop="@+id/b0"
                 android:layout_alignParentStart="true" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView17"
+                android:id="@+id/b2"
                 android:background="@drawable/nullcard"
                 android:layout_marginStart="25dp"
-                android:layout_alignTop="@+id/imageView15"
-                android:layout_alignStart="@+id/imageView16" />
+                android:layout_alignTop="@+id/b0"
+                android:layout_alignStart="@+id/b1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView18"
+                android:id="@+id/b3"
                 android:background="@drawable/nullcard"
                 android:layout_marginStart="24dp"
-                android:layout_alignTop="@+id/imageView15"
-                android:layout_alignStart="@+id/imageView17" />
+                android:layout_alignTop="@+id/b0"
+                android:layout_alignStart="@+id/b2" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView19"
+                android:id="@+id/b4"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView15"
-                android:layout_toEndOf="@+id/imageView15" />
+                android:layout_alignTop="@+id/b0"
+                android:layout_toEndOf="@+id/b0" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView20"
+                android:id="@+id/b5"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView16"
-                android:layout_toEndOf="@+id/imageView16" />
+                android:layout_alignTop="@+id/b1"
+                android:layout_toEndOf="@+id/b1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView21"
+                android:id="@+id/b6"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView17"
-                android:layout_toEndOf="@+id/imageView17" />
+                android:layout_alignTop="@+id/b2"
+                android:layout_toEndOf="@+id/b2" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView22"
+                android:id="@+id/b7"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView18"
-                android:layout_toEndOf="@+id/imageView18" />
+                android:layout_alignTop="@+id/b3"
+                android:layout_toEndOf="@+id/b3" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView23"
+                android:id="@+id/b8"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView19"
-                android:layout_toEndOf="@+id/imageView19" />
+                android:layout_alignTop="@+id/b4"
+                android:layout_toEndOf="@+id/b4" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView24"
+                android:id="@+id/b9"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView20"
-                android:layout_toEndOf="@+id/imageView20" />
+                android:layout_alignTop="@+id/b5"
+                android:layout_toEndOf="@+id/b5" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView25"
+                android:id="@+id/b10"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView21"
-                android:layout_toEndOf="@+id/imageView21" />
+                android:layout_alignTop="@+id/b6"
+                android:layout_toEndOf="@+id/b6" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView26"
+                android:id="@+id/b11"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView23"
+                android:layout_alignTop="@+id/b8"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
     </LinearLayout>
@@ -133,9 +133,10 @@
             <ImageButton
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/imageButton"
+                android:id="@+id/Pick"
                 android:background="@drawable/shirt"
-                android:onClick="giveMeMore" />
+                android:onClick="buttonPick"
+                android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -149,7 +150,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
+                android:id="@+id/Status"
                 android:contentDescription="status" />
         </LinearLayout>
 
@@ -163,23 +164,26 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton2"
+                android:id="@+id/NewGame"
                 android:src="@drawable/new_button"
-                android:layout_weight="3" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton3"
-                android:src="@drawable/exit_button"
-                android:layout_weight="3" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton4"
                 android:layout_weight="3"
-                android:src="@drawable/stop_button" />
+                android:onClick="buttonNew" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Exit"
+                android:src="@drawable/exit_button"
+                android:layout_weight="3"
+                android:onClick="buttonExit" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Stop"
+                android:layout_weight="3"
+                android:src="@drawable/stop_button"
+                android:onClick="buttonStop" />
         </LinearLayout>
     </LinearLayout>
 
@@ -191,12 +195,13 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/player">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView3"
+                android:id="@+id/p0"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 android:background="@drawable/nullcard" />
@@ -204,92 +209,92 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView4"
+                android:id="@+id/p1"
                 android:background="@drawable/nullcard"
                 android:layout_marginStart="25dp"
-                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignTop="@+id/p0"
                 android:layout_alignParentStart="true" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView5"
+                android:id="@+id/p2"
                 android:background="@drawable/nullcard"
                 android:layout_marginStart="25dp"
-                android:layout_alignTop="@+id/imageView3"
-                android:layout_alignStart="@+id/imageView4" />
+                android:layout_alignTop="@+id/p0"
+                android:layout_alignStart="@+id/p1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView6"
+                android:id="@+id/p3"
                 android:background="@drawable/nullcard"
                 android:layout_marginStart="24dp"
-                android:layout_alignTop="@+id/imageView3"
-                android:layout_alignStart="@+id/imageView5" />
+                android:layout_alignTop="@+id/p0"
+                android:layout_alignStart="@+id/p2" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView7"
+                android:id="@+id/p4"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView3"
-                android:layout_toEndOf="@+id/imageView3" />
+                android:layout_alignTop="@+id/p0"
+                android:layout_toEndOf="@+id/p0" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView8"
+                android:id="@+id/p5"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView4"
-                android:layout_toEndOf="@+id/imageView4" />
+                android:layout_alignTop="@+id/p1"
+                android:layout_toEndOf="@+id/p1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView9"
+                android:id="@+id/p6"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView5"
-                android:layout_toEndOf="@+id/imageView5" />
+                android:layout_alignTop="@+id/p2"
+                android:layout_toEndOf="@+id/p2" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView10"
+                android:id="@+id/p7"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView6"
-                android:layout_toEndOf="@+id/imageView6" />
+                android:layout_alignTop="@+id/p3"
+                android:layout_toEndOf="@+id/p3" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView11"
+                android:id="@+id/p8"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView7"
-                android:layout_toEndOf="@+id/imageView7" />
+                android:layout_alignTop="@+id/p4"
+                android:layout_toEndOf="@+id/p4" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView12"
+                android:id="@+id/p9"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView8"
-                android:layout_toEndOf="@+id/imageView8" />
+                android:layout_alignTop="@+id/p5"
+                android:layout_toEndOf="@+id/p5" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView13"
+                android:id="@+id/p10"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView9"
-                android:layout_toEndOf="@+id/imageView9" />
+                android:layout_alignTop="@+id/p6"
+                android:layout_toEndOf="@+id/p6" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView14"
+                android:id="@+id/p11"
                 android:background="@drawable/nullcard"
-                android:layout_alignTop="@+id/imageView11"
+                android:layout_alignTop="@+id/p8"
                 android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
