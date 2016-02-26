@@ -40,7 +40,6 @@ public class Gamer {
     }
 
     public int[] pick(int[] cards) {
-        System.out.println("start picking");
         int size,
                 image_id;
         if ((size = cards.length) == 0) {
