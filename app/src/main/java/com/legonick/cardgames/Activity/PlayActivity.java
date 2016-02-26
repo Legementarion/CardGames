@@ -10,13 +10,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.legonick.cardgames.Core.GameCore;
+import com.legonick.cardgames.GameLogic.Game;
 import com.legonick.cardgames.R;
 
 /**
  * Created by Lego on 24.02.2016.
  */
 public class PlayActivity extends Activity{
-    GameCore game;
+//    GameCore game;
+    Game game;
 
     ImageButton exit_button = null;
     ImageButton stop_button = null;
@@ -25,8 +27,6 @@ public class PlayActivity extends Activity{
 
     public ImageView[] imageViewsOfBot = new ImageView[12];
     public ImageView[] imageViewsOfUser = new ImageView[12];
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +45,12 @@ public class PlayActivity extends Activity{
             System.out.println(imageViewsOfUser[i].toString());
         }
 
-        game = GameCore.getInstance(this);
-
-
-
-
-
+//        game = GameCore.getInstance(this);
+        game = Game.getInstance(this);
     }
 
-
     public void buttonStop(View view) {
-        game.stopGame();
+        game.endGame();
     }
     public void buttonExit(View view) {
         Intent playScreen = new Intent(PlayActivity.this, MainMenuActivity.class);
@@ -68,6 +63,4 @@ public class PlayActivity extends Activity{
     public void buttonPick(View view) {
         game.userPick();
     }
-
-
 }

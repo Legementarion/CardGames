@@ -1,19 +1,24 @@
 package com.legonick.cardgames.GameLogic;
 
-/**
- * Created by Lego on 24.02.2016.
- */
+import android.content.res.Resources;
+import android.widget.ImageView;
+
+import com.legonick.cardgames.Activity.PlayActivity;
+
 public class Bot implements Gamer {
 
     public int result;
     public boolean readyToPick;
-    public int[] cards;
+    private ImageView[] cards;
     public int cardsIndex;
+    private Resources res;
+    private PlayActivity activity;
 
-    public Bot() {
+    public Bot(PlayActivity activity) {
+        this.activity = activity;
         result = 0;
         readyToPick = true;
-        cards = new int[11];
+        cards = activity.imageViewsOfBot;
         cardsIndex = 0;
     }
 
@@ -26,6 +31,7 @@ public class Bot implements Gamer {
 
     @Override
     public void addcard(int cardId) {
-        cards[cardsIndex++] = cardId;
+        int image_id = res.getIdentifier("c" + cardId, "newDrawable", activity.getPackageName());
+        this.cards[cardsIndex++].setImageResource(image_id);
     }
 }

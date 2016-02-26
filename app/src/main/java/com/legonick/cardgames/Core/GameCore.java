@@ -39,10 +39,8 @@ public class GameCore {
         bot = new Bot(activity);
         int i = 0;
         while (i < 2) {
-            System.out.println("pick user");
             user.pick(gameDeck);
             // TODO: 26.02.2016 activity image set
-            System.out.println("pick bot");
             bot.pick(gameDeck);
             i++;
         }
@@ -52,15 +50,18 @@ public class GameCore {
         bot.doPicks(gameDeck);
         int bot_result = WIN_STAT - bot.getResult();
         int user_result = WIN_STAT - user.getResult();
+
+        System.out.println("BOT " + bot_result);
+        System.out.println("USER " + user_result);
+
         if ((bot_result < 0) && (user_result >= 0)) {
             ((ImageView) activity.findViewById(R.id.Status)).setImageResource(R.drawable.win);
             return;
-        }
+        } else
         if (user_result < 0) {
             ((ImageView) activity.findViewById(R.id.Status)).setImageResource(R.drawable.lose);
             return;
-        }
-
+        }else
         if (bot_result < user_result) {
             //winer bot
             ((ImageView) activity.findViewById(R.id.Status)).setImageResource(R.drawable.lose);
