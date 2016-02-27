@@ -73,7 +73,6 @@ public class GameCore {
 
     public void userPick() {
         try {
-
             gameDeck = user.pick(gameDeck);
             STEPS++;
             if (STEPS>12) stopGame();

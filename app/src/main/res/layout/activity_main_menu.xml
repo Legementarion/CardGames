@@ -23,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="98dp"
-        android:onClick="PlayWithBot" />
+        android:onClick="playWithBot" />
 
     <Button
         android:layout_width="wrap_content"
@@ -41,6 +41,8 @@
         android:id="@+id/button"
         android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp" />
+        android:layout_marginTop="68dp"
+        android:onClick="helpButton"
+        android:nestedScrollingEnabled="false" />
 
 </RelativeLayout>
