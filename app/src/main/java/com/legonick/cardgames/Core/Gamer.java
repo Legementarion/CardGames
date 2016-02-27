@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import com.legonick.cardgames.Activity.PlayActivity;
 import com.legonick.cardgames.GameLogic.Game;
 import com.legonick.cardgames.R;
+import com.legonick.cardgames.Utils.EndGameEx;
 
 import java.util.Random;
 
@@ -39,47 +40,22 @@ public class Gamer {
         result += value;
     }
 
-    public int[] pick(int[] cards) {
-        int size,
-                image_id;
-        if ((size = cards.length) == 0) {
-            throw new ArithmeticException();
-        }
-        int index = new Random().nextInt(size);
-        if (index == 4) index = size - 1;
-        if (cards[index] != 0) {
-            addToResult(cards[index]);
-            String buf = "c" + 1 + "_" + (index + 1);
-            image_id = res.getIdentifier(buf, "drawable", activity.getPackageName());
-            this.cards[picked].setImageResource(image_id);
-            picked++;
-            System.out.println(image_id + " " + buf);
-            cards[index] -= index;
-        } else {
-            while (true) {
-                if (index == size) {
-                    index = 0;
-                }
-                if (cards[index] != 0) {
-                    addToResult(cards[index]);
-                    String buf = "c" + 1 + "_" + (index + 1);
-                    image_id = res.getIdentifier(buf, "drawable", activity.getPackageName());
-                    this.cards[picked].setImageResource(image_id);
-                    picked++;
-                    System.out.println(image_id + " " + buf);
-                    cards[index] -= index;
-                    break;
-                }
-                index++;
-            }
-        }
-        System.out.println("end picking");
-        return cards;
-    }
+    public void pick(Deck deck) throws EndGameEx {
+        if (picked==12) { throw  new EndGameEx();}
+        Deck.Card pickedCard = deck.pickCard();
+        result += pickedCard.value;
+        StringBuffer buf = new StringBuffer("c" + pickedCard.type + "_" + pickedCard.value);
+        this.cards[picked].setImageResource(res.getIdentifier(buf.toString(), "drawable", activity.getPackageName()));
+        picked++;
 
+    }
 
     public void setCards(ImageView[] cards) {
         this.cards = cards;
+    }
+
+    public PlayActivity getActivity() {
+        return activity;
     }
 
 
