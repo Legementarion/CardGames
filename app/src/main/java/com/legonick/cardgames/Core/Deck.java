@@ -1,14 +1,14 @@
 package com.legonick.cardgames.Core;
 
-import java.util.HashMap;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Created by baylrock on 27.02.2016.
+ * @author Lego on 27.02.2016.
  */
 public class Deck {
-    static final int DECK_SIZE = 36;
+
+    static final int MIN_DECK_SIZE = 36;
+    static final int MAX_DECK_SIZE = 52;
 
     public static class Card {
         int value;
@@ -35,22 +35,23 @@ public class Deck {
 
 
     public Deck() {
-        initGameDeck(DECK_SIZE);
+        initGameDeck(MIN_DECK_SIZE);
     }
 
     public Deck(int deckSize) {
-        if (deckSize < DECK_SIZE) {
-            initGameDeck(DECK_SIZE);
+        if (deckSize <= MIN_DECK_SIZE) {
+            initGameDeck(MIN_DECK_SIZE);
             return;
         }
-        initGameDeck(deckSize);
+        initGameDeck(MAX_DECK_SIZE);
+
     }
 
     private void initGameDeck(int deckSize) {
         cards = new Card[deckSize];
         for (int i = 0, val = 1, type = 0; i < deckSize; i++, val++) {
             cards[i] = new Card(val == 5 ? (++val) : val, Types.getTypeByID(type));
-            if (val == 10) {
+            if (val == (deckSize / 4)+1) {
                 val = 0;
                 type++;
             }

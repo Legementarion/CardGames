@@ -16,11 +16,12 @@ import java.util.Random;
 public class Gamer {
 
 
-    private ImageView[] cards;
-    private int picked = 0;
-    private int result = 0;
-    private PlayActivity activity;
-    private Resources res;
+
+    protected ImageView[] cards;
+    protected int picked = 0;
+    protected int result = 0;
+    protected PlayActivity activity;
+    protected Resources res;
 
     public Gamer(PlayActivity activity) {
         this.activity = activity;
@@ -41,13 +42,20 @@ public class Gamer {
     }
 
     public void pick(Deck deck) throws EndGameEx {
-        if (picked==12) { throw  new EndGameEx();}
+        if (picked == 12) {
+            throw new EndGameEx();
+        }
         Deck.Card pickedCard = deck.pickCard();
-        result += pickedCard.value;
-        StringBuffer buf = new StringBuffer("c" + pickedCard.type + "_" + pickedCard.value);
-        this.cards[picked].setImageResource(res.getIdentifier(buf.toString(), "drawable", activity.getPackageName()));
+        System.out.println(pickedCard);
+        addToResult(pickedCard.value);
+        addToDrawCard(pickedCard);
         picked++;
 
+    }
+
+    public void addToDrawCard(Deck.Card pickedCard) {
+        StringBuffer buf = new StringBuffer("c" + pickedCard.type + "_" + pickedCard.value);
+        this.cards[picked].setImageResource(res.getIdentifier(buf.toString(), "drawable", activity.getPackageName()));
     }
 
     public void setCards(ImageView[] cards) {
@@ -56,6 +64,10 @@ public class Gamer {
 
     public PlayActivity getActivity() {
         return activity;
+    }
+
+    public ImageView[] getCards() {
+        return cards;
     }
 
 

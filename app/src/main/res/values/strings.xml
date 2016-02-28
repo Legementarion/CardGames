@@ -4,7 +4,7 @@
     <string name="PlayWithPlayer">Play with another Player</string>
     <string name="bg_MainMeny">backgroundMainMeny</string>
     <string name="help_text">
-Цель игры набрать очков больше чем у компьютера, но не более 21.
+Цель игры набрать очков больше чем у компьютера, но не более 21. \n
 Значения очков каждой карты: \n
    от шестёрки до десятки — соответственно от 6 до 10 ;\n
    у <b>туза</b> — 1\n

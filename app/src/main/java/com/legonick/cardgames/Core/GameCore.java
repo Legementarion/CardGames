@@ -16,6 +16,7 @@ public class GameCore {
     private Gamer user;
     private Bot bot;
     private Deck deck;
+    private boolean gameState;
 
     public static GameCore getInstance(PlayActivity activity) {
         return game == null ? (game = new GameCore(activity)) : game;
@@ -40,9 +41,10 @@ public class GameCore {
             activity.imageViewsOfUser[i].setImageResource(imgResource);
             activity.imageViewsOfBot[i].setImageResource(imgResource);
         }
-        deck = new Deck();
+        deck = new Deck(Deck.MIN_DECK_SIZE);
         user = new Gamer(activity);
         bot = new Bot(activity);
+        gameState = true;
         int i = 0;
         try {
             while (i < 2) {
@@ -57,10 +59,11 @@ public class GameCore {
     }
 
     public void stopGame() {
+        if (gameState == false) return;
+        gameState = false;
         bot.doPicks(deck);
         int bot_result = WIN_STAT - bot.getResult();
         int user_result = WIN_STAT - user.getResult();
-
 
         if ((bot_result < 0) && (user_result >= 0)) {
             ((ImageView) activity.findViewById(R.id.Status)).setImageResource(R.drawable.win);
